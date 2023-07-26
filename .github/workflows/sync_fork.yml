@@ -14,6 +14,6 @@ jobs:
       - uses: tgymnich/fork-sync@v1.8
         with:
           owner: 6ameDev
-          base: master
-          head: master
+          base: main
+          head: main
           merge_method: rebase

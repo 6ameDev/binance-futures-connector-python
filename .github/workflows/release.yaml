@@ -16,12 +16,7 @@ jobs:
     - run: pip install wheel
     - name: Build new distributables
       run: python setup.py sdist bdist_wheel
-    - name: Upload distributables to PyPI
-      uses: pypa/gh-action-pypi-publish@release/v1
-      with:
-        user: __token__
-        password: ${{ secrets.PYPI_API_TOKEN }}
     - name: Post release cleaning
       run: |
         python setup.py clean --all
-        rm dist/*
+        # rm dist/*
