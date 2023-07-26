@@ -26,7 +26,7 @@ class UMFuturesWebsocketClient(BinanceWebsocketClient):
             on_error=on_error,
             on_ping=on_ping,
             on_pong=on_pong,
-            logger=logger
+            logger=logger,
         )
 
     def agg_trade(self, symbol: str, id=None, action=None, **kwargs):
