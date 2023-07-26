@@ -63,6 +63,7 @@ class BinanceSocketManager(threading.Thread):
                     self.logger.error("Lost websocket connection")
                 else:
                     self.logger.error("Websocket exception: {}".format(e))
+                self.on_error(self, e)
                 raise e
             except Exception as e:
                 self.logger.error("Exception in read_data: {}".format(e))

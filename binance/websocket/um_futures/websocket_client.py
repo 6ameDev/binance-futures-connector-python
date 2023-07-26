@@ -11,6 +11,7 @@ class UMFuturesWebsocketClient(BinanceWebsocketClient):
         on_error=None,
         on_ping=None,
         on_pong=None,
+        logger=None,
         is_combined=False,
     ):
         if is_combined:
@@ -25,6 +26,7 @@ class UMFuturesWebsocketClient(BinanceWebsocketClient):
             on_error=on_error,
             on_ping=on_ping,
             on_pong=on_pong,
+            logger=logger
         )
 
     def agg_trade(self, symbol: str, id=None, action=None, **kwargs):
